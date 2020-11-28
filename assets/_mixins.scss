@@ -1,0 +1,22 @@
+@mixin primary-font {
+  font-family: $primary-font;
+}
+
+@mixin secondary-font {
+  font-family: $secondary-font;
+}
+
+@mixin container {
+  max-width: 1196px;
+  margin: 0 auto;
+}
+
+@mixin background-primary {
+  background-color: $primary-color;
+  color: white;
+}
+
+@mixin background-secondary {
+  background-color: $background-secondary;
+  color: $secondary-color;
+}

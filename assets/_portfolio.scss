@@ -1,0 +1,66 @@
+.portfolio {
+  @include container;
+  margin-top: 62px;
+  height: 1141px;
+  display: block;
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--title {
+    font-size: 16px;
+    flex: 1 0 auto;
+  }
+
+  &--items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__items--item {
+    display: block;
+    width: 382px;
+    height: 303px;
+    background-color: #e5e5e5;
+    margin-bottom: 25px;
+    background-image: url(./images/pexels-photo-443446.jpg);
+    position: relative;
+    cursor: pointer;
+    &::after {
+      opacity: 0;
+      position: absolute;
+      z-index: 1;
+      background-color: black;
+      content: ' ';
+      width: 100%;
+      height: 100%;
+    }
+    &:hover::after {
+      transition: 1s;
+      opacity: 0.45;
+    }
+
+    &:hover .title {
+      transition: 1s;
+      opacity: 1;
+    }
+
+    .title {
+      position: absolute;
+      font-size: 22px;
+      top: 110px;
+      text-align: center;
+      width: 100%;
+      z-index: 2;
+      color: white;
+      opacity: 0;
+    }
+  }
+
+  &--contact {
+    width: 100%;
+    text-align: center;
+  }
+}

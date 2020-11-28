@@ -1,0 +1,30 @@
+header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  @include container;
+
+  .logo {
+    height: 47px;
+    flex: 1 0 auto;
+    img {
+      height: 50px;
+    }
+  }
+
+  .navigation {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 0 25px;
+      a {
+        @include secondary-font;
+        text-decoration: none;
+        color: $secondary-color;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+button {
+  @include secondary-font;
+  @include background-primary;
+  border: 0;
+  padding: 12px;
+  cursor: pointer;
+
+  &.secondary {
+    @include secondary-font;
+    @include background-secondary;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
